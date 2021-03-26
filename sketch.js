@@ -6,12 +6,12 @@ let bag = [];
 let coin = [];
 let scene;
 //let score = 0;
-
+// function to load Images/sounds, etc,...
 function preload() {
   wImg = loadImage("whale.png");
   pImg = loadImage("plasticbag.png");
   cImg = loadImage("coin.jpeg");
-  
+
 }
 
 function setup() {
@@ -20,11 +20,11 @@ function setup() {
   bckgrnd = loadImage("ocean(1).jpg");
   bckgrnd2 = loadImage("ocean2.jpeg");
   scene = 1;
-  
+
 
 
 }
-
+//The button that allow the player to switch on to the main game scene
 var theButton = function() {
 
   noStroke();
@@ -57,6 +57,7 @@ var theButton = function() {
 // text("About", 260, 185);
 //}
 
+//If the player pressed the spacebar the whale will jumps up
 function keyPressed() {
   if (key == ' ') {
     whale.jump();
@@ -67,6 +68,7 @@ function keyPressed() {
 
 
 function draw() {
+  //Scene #1 (The opening scene)
   if (scene == 1) {
     background(bckgrnd2);
     fill(9, 12, 102);
@@ -83,13 +85,14 @@ function draw() {
   if (mouseIsPressed) {
     scene = 2;
   }
+  //Scene 2 (Main game scene)
   if (scene == 2) {
 
-
+    //Random chance of adding a new plastic bag each time
     if (random(1) < 0.01) {
       bag.push(new Bag());
     }
-
+    // A random chance of adding coins into the game each time
     if (random(1) < 0.006) {
       coin.push(new Coin());
     }
