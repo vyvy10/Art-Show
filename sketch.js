@@ -11,7 +11,7 @@ function preload() {
   wImg = loadImage("whale.png");
   pImg = loadImage("plasticbag.png");
   cImg = loadImage("coin.jpeg");
-  mySound = loadSound("_natureocean.mp3")
+ // mySound = loadSound("_natureocean.mp3")
   
 }
 
@@ -78,8 +78,8 @@ function draw() {
     textSize(18);
     text("WELCOME TO THE MARINE MISSION!", 10, 60);
     text("Let's try to protect our whale!", 70, 100);
-    mySound.play();
-    mySound.setVolume(0.1);
+    //mySound.play();
+   // mySound.setVolume(0.1);
   }
   
   theButton();
