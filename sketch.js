@@ -1,3 +1,5 @@
+//the base code is from  https://youtu.be/l0HoJHc-63Q
+//I added the images, scoring, sound, scenes, texts, and another obstacle
 let whale;
 let wImg;
 let pImg;
