@@ -1,5 +1,5 @@
-//the base code is from  https://youtu.be/l0HoJHc-63Q
-//I added the images, scoring, sound, scenes, texts, and another obstacle
+//the base code is from : https://youtu.be/l0HoJHc-63Q (CHROME DINOSAUR GAME)
+//I added the images, scoring, sound, scenes, texts.
 let whale;
 let wImg;
 let pImg;
@@ -8,7 +8,7 @@ let bag = [];
 let coin = [];
 let scene;
 //let score = 0;
-// function to load Images/sounds, etc,...
+// function to load medias like Images/sounds, etc,...before the setup function
 function preload() {
   wImg = loadImage("whale.png");
   pImg = loadImage("plasticbag.png");
@@ -91,6 +91,7 @@ function draw() {
   
   // theButton2();
   // theButton3();
+  //To switch to scene #2
   if (mouseIsPressed) {
     scene = 2;
   }
