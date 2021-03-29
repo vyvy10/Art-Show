@@ -10,6 +10,7 @@ class Whale {
     //The gravity adjust the speed of the whale(acceleration)
     this.gravity = 0.6;
     this.score = 0;
+    this.dead = false;
   }
   //Instant force, push it up
   jump() {
@@ -22,12 +23,18 @@ class Whale {
 
     if ((obs.x >= this.x && obs.x <= (this.x + this.r)) && (obs.y >= this.y && obs.y <= (this.y + this.r))) {
       obs.y = -400;
-      this.score++;
+      this.score+= obs.value;
+      //if the total coins(this.score) is less than -5, the whale is dead = game over
+      if(this.score<-5){
+      this.dead = true;
+      }
+      
 
 
 
 
     }
+  
   }
 
 
