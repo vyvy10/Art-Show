@@ -12,7 +12,7 @@ function preload() {
   pImg = loadImage("plasticbag.png");
   cImg = loadImage("coin.jpeg");
   mySound = loadSound("_natureocean.mp3")
-  
+
 }
 
 function setup() {
@@ -20,9 +20,10 @@ function setup() {
   whale = new Whale();
   bckgrnd = loadImage("ocean(1).jpg");
   bckgrnd2 = loadImage("ocean2.jpeg");
+  bckgrnd3 = loadImage("deadwhale.jpeg");
   scene = 1;
- //mySound.play();
-//mySound.setVolume(0.6);
+  //mySound.play();
+  //mySound.setVolume(0.6);
 
 
 
@@ -81,10 +82,11 @@ function draw() {
     text("WELCOME TO THE MARINE MISSION!", 10, 60);
     text("Let's try to protect our whale!", 70, 100);
     mySound.play();
- mySound.setVolume(0.02);
+    mySound.setVolume(0.02);
+    theButton();
   }
+
   
-  theButton();
   // theButton2();
   // theButton3();
   if (mouseIsPressed) {
@@ -94,11 +96,11 @@ function draw() {
   if (scene == 2) {
 
     //Random chance of adding a new plastic bag each time
-    if (random(1) < 0.01) {
+    if (random(1) < 0.02) {
       bag.push(new Bag());
     }
     // A random chance of adding coins into the game each time
-    if (random(1) < 0.006) {
+    if (random(1) < 0.01) {
       coin.push(new Coin());
     }
     background(bckgrnd);
@@ -112,6 +114,15 @@ function draw() {
     for (let b of bag) {
       b.move();
       b.show();
+      whale.hits(b);
+      if(whale.dead== true){
+        scene = 3;
+      }
+      
+        
+      
+     
+       
 
     }
 
@@ -119,6 +130,9 @@ function draw() {
       c.show();
       c.move();
       whale.hits(c);
+      
+      
+      
 
 
     }
@@ -126,13 +140,26 @@ function draw() {
     whale.show();
     whale.move();
 
-
-
-
-
-
+    if (scene == 3){
+      background(bckgrnd3);
+      fill(255, 255, 255);
+      textFont("Georgia");
+      textStyle(BOLD);
+      textSize(35);
+      text("GAME OVER", 100, 210);
+      
+      
+    }
+    
+    
+    
+    
 
   }
+
+
+
+  
 
 
 }
