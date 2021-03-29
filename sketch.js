@@ -79,7 +79,7 @@ function draw() {
     text("WELCOME TO THE MARINE MISSION!", 10, 60);
     text("Let's try to protect our whale!", 70, 100);
     mySound.play();
-    mySound.setVolume(0.02);
+    mySound.setVolume(0.1);
   }
   
   theButton();
