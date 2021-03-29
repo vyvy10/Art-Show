@@ -8,10 +8,10 @@ let scene;
 //let score = 0;
 // function to load Images/sounds, etc,...
 function preload() {
-  wImg = loadImage("whale.png");
-  pImg = loadImage("plasticbag.png");
-  cImg = loadImage("coin.jpeg");
-  mySound = loadSound("_natureocean.mp3")
+  //wImg = loadImage("whale.png");
+  //pImg = loadImage("plasticbag.png");
+  //cImg = loadImage("coin.jpeg");
+  //mySound = loadSound("_natureocean.mp3")
   
 }
 
