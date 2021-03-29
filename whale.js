@@ -40,12 +40,12 @@ class Whale {
     this.y = constrain(this.y, 0, height - this.r);
   }
   show() {
-    //Where the wale is located (it's staying at a spot)
+    //Where the whale is located (it's staying at a spot)
     image(wImg, this.x, this.y - 15, this.r + 35, this.r + 20);
     fill(0, 0, 0);
     stroke(225);
     textSize(23);
     textFont('serif');
-    text("Total Score:" + this.score, 240, 60)
+    text("Total Coin:" + this.score, 240, 60)
   }
 }
