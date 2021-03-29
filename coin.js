@@ -6,6 +6,7 @@ class Coin {
     this.x = width;
     //Y starts at the bottom
     this.y = height - this.r;
+    this.value=1;
   }
   move() {
     //The whole screen is scrolling by 5 pixels
