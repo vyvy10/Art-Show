@@ -22,7 +22,7 @@ function setup() {
   bckgrnd2 = loadImage("ocean2.jpeg");
   scene = 1;
   mySound.play();
-  mySound.setVolume(0.02);
+  mySound.setVolume(0.6);
 
 
 
