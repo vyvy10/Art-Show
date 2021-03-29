@@ -21,8 +21,8 @@ function setup() {
   bckgrnd = loadImage("ocean(1).jpg");
   bckgrnd2 = loadImage("ocean2.jpeg");
   scene = 1;
-  mySound.play();
-  mySound.setVolume(0.6);
+  //mySound.play();
+  //mySound.setVolume(0.6);
 
 
 
@@ -80,8 +80,8 @@ function draw() {
     textSize(18);
     text("WELCOME TO THE MARINE MISSION!", 10, 60);
     text("Let's try to protect our whale!", 70, 100);
-    //mySound.play();
-    //mySound.setVolume(0.02);
+    mySound.play();
+    mySound.setVolume(0.02);
   }
   
   theButton();
